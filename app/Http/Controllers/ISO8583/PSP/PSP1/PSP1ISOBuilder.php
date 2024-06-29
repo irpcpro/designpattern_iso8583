@@ -5,9 +5,8 @@ namespace App\Http\Controllers\ISO8583\PSP\PSP1;
 use App\Http\Controllers\ISO8583\BufferMessageDecorator\BufferMessageDecorator;
 use App\Http\Controllers\ISO8583\Builders\ISOBuilder;
 use App\Http\Controllers\ISO8583\PSP\PSP;
-use App\Http\Controllers\ISO8583\PSP\PSPISOBuilderInterface;
 
-class PSP1ISOBuilder extends ISOBuilder implements PSPISOBuilderInterface {
+class PSP1ISOBuilder extends ISOBuilder {
     private array $BitMap;
 
     /**
@@ -20,15 +19,15 @@ class PSP1ISOBuilder extends ISOBuilder implements PSPISOBuilderInterface {
         $this->BitMap = $BitMap;
     }
 
-    public function getBitMap(BufferMessageDecorator $buffer){
+    protected function getBitMap(BufferMessageDecorator $buffer){
         return join($this->BitMap);
     }
 
-    public function setHeader(BufferMessageDecorator $buffer){
+    protected function setHeader(BufferMessageDecorator $buffer){
         // TODO: Implement setHeader() method.
     }
 
-    public function setMAC(BufferMessageDecorator $buffer){
+    protected function setMAC(BufferMessageDecorator $buffer){
         // TODO: Implement setMAC() method.
     }
 }
