@@ -16,7 +16,7 @@ class PSP1PurchaseBuilder extends PSP1ISOBuilder implements PSPTransactionBuilde
     }
 
     public function build(){
-        // TODO: Implement build() method.
+        echo 'done';
     }
 
 }
