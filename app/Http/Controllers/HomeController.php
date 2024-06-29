@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 
 class HomeController extends Controller {
     public function index(){
-        echo 'hi';
+        dd(
+            date('Y/m/d H:i:s'),
+            date('md')
+        );
     }
 }
